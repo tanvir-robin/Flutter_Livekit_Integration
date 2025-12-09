@@ -8,7 +8,6 @@ import '../widgets/action_button.dart';
 import '../services/livekit_service.dart';
 import 'dart:async';
 
-/// Screen for managing screen sharing
 class ScreenShareScreen extends ConsumerStatefulWidget {
   const ScreenShareScreen({super.key});
 
@@ -22,12 +21,9 @@ class _ScreenShareScreenState extends ConsumerState<ScreenShareScreen> {
   @override
   void initState() {
     super.initState();
-    // Refresh every 2 seconds to update remote tracks
     _refreshTimer = Timer.periodic(const Duration(seconds: 2), (_) {
       if (mounted) {
-        setState(() {
-          // This will trigger a rebuild to show new remote tracks
-        });
+        setState(() {});
       }
     });
   }
@@ -91,9 +87,8 @@ class _ScreenShareScreenState extends ConsumerState<ScreenShareScreen> {
                 ),
               ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 16),
 
-              // Screen sharing control
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),

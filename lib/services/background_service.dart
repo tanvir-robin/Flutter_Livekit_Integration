@@ -2,14 +2,12 @@ import 'dart:io';
 import 'package:flutter_background/flutter_background.dart';
 import 'logging_service.dart';
 
-/// Service for managing background execution
 class BackgroundService {
   bool _isInitialized = false;
   bool _isActive = false;
 
   bool get isActive => _isActive;
 
-  /// Initialize the background service
   Future<void> initialize() async {
     if (_isInitialized) return;
 

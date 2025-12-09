@@ -5,7 +5,6 @@ import 'logging_service.dart';
 import 'background_service.dart';
 import 'media_projection_service.dart';
 
-/// Service for managing LiveKit connections and screen sharing
 class LiveKitService {
   static final LiveKitService _instance = LiveKitService._internal();
   factory LiveKitService() => _instance;
@@ -21,13 +20,11 @@ class LiveKitService {
       _room?.connectionState == lk.ConnectionState.connected;
   bool get isScreenSharing => _screenShareTrack != null;
 
-  /// Initialize the service
   Future<void> initialize() async {
     LoggingService.info('Initializing LiveKit service');
     await _backgroundService.initialize();
   }
 
-  /// Connect to a LiveKit room
   Future<void> connect({
     required String url,
     required String token,
@@ -36,13 +33,8 @@ class LiveKitService {
     try {
       LoggingService.info('Connecting to LiveKit room: $url');
 
-      // Create room instance
       _room = lk.Room();
-
-      // Set up event listeners
       _room!.addListener(_onRoomUpdate);
-
-      // Connect to room
       await _room!.connect(
         url,
         token,

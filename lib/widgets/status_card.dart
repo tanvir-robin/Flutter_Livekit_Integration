@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/app_state.dart';
 
-/// Widget that displays the current application status
 class StatusCard extends StatelessWidget {
   final AppState appState;
 

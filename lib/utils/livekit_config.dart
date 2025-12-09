@@ -1,20 +1,14 @@
 import 'dart:convert';
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
 
-/// Configuration for LiveKit
 class LiveKitConfig {
   static const String serverUrl = 'YOUR_LIVEKIT_SERVER_URL_HERE';
   static const String apiKey = 'YOUR_LIVEKIT_API_KEY_HERE';
 
-  // Your actual API secret from LiveKit dashboard
   static const String apiSecret = 'YOUR_LIVEKIT_API_SECRET_HERE';
-  // Default room and participant settings
   static const String defaultRoomName = 'screen-share-room';
   static const String defaultParticipantName = 'screen-sharer';
 
-  /// Generate a JWT token for LiveKit authentication
-  /// Note: In production, tokens should be generated on your backend server
-  /// This is for demo purposes only
   static String generateToken({
     required String roomName,
     required String participantName,
@@ -23,7 +17,6 @@ class LiveKitConfig {
     try {
       final secret = customApiSecret ?? apiSecret;
 
-      // If no proper secret is provided, return a demo token
       if (secret == 'YOUR_API_SECRET_HERE') {
         return _generateDemoToken(roomName, participantName);
       }
@@ -31,14 +24,12 @@ class LiveKitConfig {
       final now = DateTime.now();
       final expiry = now.add(const Duration(hours: 6));
 
-      // Create JWT payload following LiveKit's exact format
       final payload = {
-        'iss': apiKey, // issuer: API key
-        'sub': participantName, // subject: participant identity
-        'iat': now.millisecondsSinceEpoch ~/ 1000, // issued at
-        'exp': expiry.millisecondsSinceEpoch ~/ 1000, // expires
-        'nbf': now.millisecondsSinceEpoch ~/ 1000, // not before
-        // Video grant following LiveKit's structure
+        'iss': apiKey,
+        'sub': participantName,
+        'iat': now.millisecondsSinceEpoch ~/ 1000,
+        'exp': expiry.millisecondsSinceEpoch ~/ 1000,
+        'nbf': now.millisecondsSinceEpoch ~/ 1000,
         'video': {
           'room': roomName,
           'roomJoin': true,

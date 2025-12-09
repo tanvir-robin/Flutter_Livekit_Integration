@@ -2,13 +2,11 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'logging_service.dart';
 
-/// Service for managing platform-specific media projection services
 class MediaProjectionService {
   static const _channel = MethodChannel(
     'com.example.livekit_demo/media_projection',
   );
 
-  /// Start the native media projection service (Android only)
   static Future<bool> startService() async {
     if (!Platform.isAndroid) {
       LoggingService.debug(
@@ -27,7 +25,6 @@ class MediaProjectionService {
     }
   }
 
-  /// Stop the native media projection service (Android only)
   static Future<bool> stopService() async {
     if (!Platform.isAndroid) {
       LoggingService.debug(

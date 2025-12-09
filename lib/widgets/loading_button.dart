@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Button widget that shows loading state
 class LoadingButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final bool isLoading;

@@ -4,7 +4,6 @@ import '../providers/livekit_provider.dart';
 import '../utils/livekit_config.dart';
 import '../widgets/loading_button.dart';
 
-/// Screen for connecting to a LiveKit room
 class ConnectionScreen extends ConsumerStatefulWidget {
   const ConnectionScreen({super.key});
 
@@ -20,7 +19,6 @@ class _ConnectionScreenState extends ConsumerState<ConnectionScreen> {
   @override
   void initState() {
     super.initState();
-    // Pre-fill with current default values
     _roomController.text = LiveKitConfig.defaultRoomName;
     _participantController.text =
         'User${DateTime.now().millisecondsSinceEpoch % 1000}';
@@ -96,7 +94,6 @@ class _ConnectionScreenState extends ConsumerState<ConnectionScreen> {
                   const SizedBox(height: 16),
                 ],
 
-                // Header section
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),

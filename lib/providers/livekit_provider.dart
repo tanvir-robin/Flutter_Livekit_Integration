@@ -4,12 +4,10 @@ import '../models/app_state.dart';
 import '../services/livekit_service.dart';
 import '../services/logging_service.dart';
 
-/// Provider for managing the LiveKit connection and screen sharing state
 final liveKitProvider = StateNotifierProvider<LiveKitNotifier, AppState>((ref) {
   return LiveKitNotifier();
 });
 
-/// Notifier for LiveKit connection and screen sharing
 class LiveKitNotifier extends StateNotifier<AppState> {
   LiveKitNotifier() : super(const AppState()) {
     _initialize();
@@ -17,7 +15,6 @@ class LiveKitNotifier extends StateNotifier<AppState> {
 
   final _liveKitService = LiveKitService();
 
-  /// Initialize the service
   Future<void> _initialize() async {
     try {
       await _liveKitService.initialize();
@@ -35,7 +32,6 @@ class LiveKitNotifier extends StateNotifier<AppState> {
     }
   }
 
-  /// Connect to a LiveKit room
   Future<void> connect({
     required String url,
     required String token,

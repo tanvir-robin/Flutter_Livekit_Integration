@@ -1,4 +1,3 @@
-/// Connection state for the application
 enum AppConnectionState {
   disconnected,
   connecting,
@@ -7,10 +6,8 @@ enum AppConnectionState {
   error,
 }
 
-/// Screen sharing state
 enum ScreenShareState { idle, starting, active, stopping, error }
 
-/// Application state model
 class AppState {
   final AppConnectionState connectionState;
   final ScreenShareState screenShareState;
