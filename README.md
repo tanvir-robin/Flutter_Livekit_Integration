@@ -316,10 +316,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 🐛 **Bug Reports**: [Create an Issue](https://github.com/your-username/livekit-screen-share-flutter/issues)
-- 💡 **Feature Requests**: [Create an Issue](https://github.com/your-username/livekit-screen-share-flutter/issues)
-- 📖 **Documentation**: [Wiki](https://github.com/your-username/livekit-screen-share-flutter/wiki)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/your-username/livekit-screen-share-flutter/discussions)
+- 🐛 **Bug Reports**: [Create an Issue](https://github.com/tanvir-robin/Flutter_Livekit_Integration/issues)
+- 💡 **Feature Requests**: [Create an Issue](https://github.com/tanvir-robin/Flutter_Livekit_Integration/issues)
+- 📖 **Documentation**: [Wiki](https://github.com/tanvir-robin/Flutter_Livekit_Integration/wiki)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/tanvir-robin/Flutter_Livekit_Integration/discussions)
+
+## 👨‍💻 Author
+
+**Tanvir Robin**
+- 📧 **Email**: [contact@tanvirrobin.dev](mailto:contact@tanvirrobin.dev)
+- 🌐 **Portfolio**: [https://tanvirrobin.dev](https://tanvirrobin.dev)
+- 💼 **LinkedIn**: [https://linkedin.com/in/tanvir-robin](https://linkedin.com/in/tanvir-robin)
 
 ---
 
