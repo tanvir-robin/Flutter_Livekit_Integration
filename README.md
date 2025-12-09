@@ -6,6 +6,12 @@ A professional Flutter application for real-time screen sharing built with LiveK
 [![LiveKit](https://img.shields.io/badge/LiveKit-000000?style=for-the-badge&logo=livekit&logoColor=white)](https://livekit.io/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 
+
+https://github.com/user-attachments/assets/b2cec24d-32c3-4554-9d5a-173c46045b64
+
+
+
+
 ## ✨ Features
 
 ### 🚀 Core Functionality
