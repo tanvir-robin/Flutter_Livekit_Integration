@@ -1,6 +1,6 @@
 # LiveKit Screen Sharing App
 
-A professional Flutter application for real-time screen sharing built with LiveKit WebRTC technology. Features simplified connection flow, remote screen viewing, and cross-platform compatibility with modern architecture.
+A fully functional Flutter application for real-time screen sharing built with LiveKit WebRTC technology. Features simplified connection flow, remote screen viewing, and cross-platform compatibility with modern architecture.
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![LiveKit](https://img.shields.io/badge/LiveKit-000000?style=for-the-badge&logo=livekit&logoColor=white)](https://livekit.io/)
